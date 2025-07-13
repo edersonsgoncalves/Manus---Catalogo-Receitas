@@ -5,7 +5,7 @@ class Receita:
         self.modo_preparo = modo_preparo
 
     def __str__(self):
-        return f"\033[1m{self.nome}\033[0m\n\n*{self.ingredientes}\n\n*{self.modo_preparo}"
+        return f"\033[1m{self.nome}\033[0m\n\n*Ingredientes\n{self.ingredientes}\n\n*Modo de Preparo\n{self.modo_preparo}"
     
     def valida_ingrediente (self, ingrediente):
         self.ingrediente = ingrediente
@@ -13,4 +13,3 @@ class Receita:
         for item in self.ingredientes:
             if self.ingrediente.lower() == item.lower():
                 return True
-            
