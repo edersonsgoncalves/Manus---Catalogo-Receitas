@@ -9,11 +9,16 @@ class Receita:
         for item in self.ingredientes:
             itens += item+"\n"
 
-        return f"-=-=\033[1m{self.nome}\033[0m=-=-\n\033[1m*Ingredientes*\033[0m\n{itens}\n\033[1m*Modo de Preparo*\033[1m\n{self.modo_preparo}"
+        return f"-=-=\033[1m{self.nome}\033[0m=-=-\n\033[1m*Ingredientes*\033[0m\n{itens}\n\033[1m*Modo de Preparo*\033[0m\n{self.modo_preparo}"
     
     def valida_ingrediente (self, ingrediente):
-        self.ingrediente = ingrediente
-        
+        ingreditente_localizado = False
         for item in self.ingredientes:
-            if self.ingrediente.lower() == item.lower():
-                return True
+            if ingrediente.lower() in item.lower():
+                ingreditente_localizado = True
+                return f"O item '{item}' foi localizado na receita."
+
+        if not ingreditente_localizado:
+            print (f"Não foram encontradas referencias ao ingrediente '{ingrediente}'")
+            return
+ 
