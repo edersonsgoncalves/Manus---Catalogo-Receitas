@@ -5,7 +5,11 @@ class Receita:
         self.modo_preparo = modo_preparo
 
     def __str__(self):
-        return f"\033[1m{self.nome}\033[0m\n\n*Ingredientes\n{self.ingredientes}\n\n*Modo de Preparo\n{self.modo_preparo}"
+        itens = ""
+        for item in self.ingredientes:
+            itens += item+"\n"
+
+        return f"-=-=\033[1m{self.nome}\033[0m=-=-\n\033[1m*Ingredientes*\033[0m\n{itens}\n\033[1m*Modo de Preparo*\033[1m\n{self.modo_preparo}"
     
     def valida_ingrediente (self, ingrediente):
         self.ingrediente = ingrediente
