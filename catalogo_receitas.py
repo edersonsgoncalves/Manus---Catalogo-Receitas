@@ -50,4 +50,4 @@ catalogo_receitas.append(receita3)
 catalogo_receitas.append(receita4)
 
 for receita in catalogo_receitas:
-    print (receita)
+    print (receita, "\n")
