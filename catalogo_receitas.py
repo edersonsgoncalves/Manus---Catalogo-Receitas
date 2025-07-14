@@ -29,20 +29,25 @@ receita1 = Receita(
     ingredientes=['1 xícara de farinha', '1 ovo', '1 xícara de leite', '1 pitada de sal'],
     modo_preparo="Misturar todos os ingredientes, bater até ficar homogêneo e fritar em frigideira antiaderente."
 )
-receita3 = Receita(
+receita2 = Receita(
     nome="Brigadeiro",
     ingredientes=['1 lata de leite condensado', '2 colheres de sopa de chocolate em pó', '1 colher de sopa de manteiga'],
     modo_preparo="Misturar tudo em uma panela, levar ao fogo baixo mexendo até desgrudar do fundo. Enrolar bolinhas e passar no granulado."
 )
-receita4 = Receita(
+receita3 = Receita(
     nome="Salada Caesar",
     ingredientes=['alface romana', 'croutons', 'queijo parmesão ralado', 'molho caesar'],
     modo_preparo="Lavar e rasgar as folhas de alface, misturar com croutons, regar com molho e finalizar com parmesão."
 )
-receita5 = Receita(
+receita4 = Receita(
     nome="Macarrão Alho e Óleo",
     ingredientes=['500g de macarrão', '6 dentes de alho', '1/2 xícara de azeite', 'sal a gosto', 'pimenta dedo-de-moça'],
     modo_preparo="Cozinhar o macarrão. Refogar o alho no azeite até dourar, misturar com o macarrão escorrido e finalizar com pimenta."
 )
-print (receita5)
-receita5.valida_ingrediente("pera")
+catalogo_receitas.append(receita1)
+catalogo_receitas.append(receita2)
+catalogo_receitas.append(receita3)
+catalogo_receitas.append(receita4)
+
+for receita in catalogo_receitas:
+    print (receita)
